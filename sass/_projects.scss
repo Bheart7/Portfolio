@@ -1,0 +1,121 @@
+.projects {
+  padding: 5rem;
+  height: 100vh;
+  text-align: center;
+
+  &__heading {
+    color: var(--primary);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  &__text {
+    padding-bottom: 3rem;
+    font-size: 1.3rem;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  &__collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  &__sentence {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    display: none;
+    padding-bottom: 2rem;
+  }
+
+  &__btn {
+    display: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      background-color: #fff;
+      color: #222;
+      padding: 1rem 1.5rem;
+      border-radius: 30px;
+      transition: all 0.2s;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__card {
+    padding: 3rem 0;
+    border-radius: 40px;
+    width: 25rem;
+    height: 20rem;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    &--1 {
+      background-image: url('../images/typesongs.png');
+    }
+    &--2 {
+      background-image: url('../images/empire.png');
+    }
+    &--3 {
+      background-image: url('../images/imart.png');
+      background-position: top;
+    }
+
+    &--1:hover {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(117, 16, 247, 0.8),
+          rgba(117, 16, 247, 0.8)
+        ),
+        url('../images/typesongs.png');
+    }
+    &--2:hover {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(117, 16, 247, 0.8),
+          rgba(117, 16, 247, 0.8)
+        ),
+        url('../images/empire.png');
+    }
+    &--3:hover {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(117, 16, 247, 0.8),
+          rgba(117, 16, 247, 0.8)
+        ),
+        url('../images/imart.png');
+    }
+  }
+
+  &__card:hover &__btn,
+  &__card:hover &__sentence {
+    display: block;
+  }
+}

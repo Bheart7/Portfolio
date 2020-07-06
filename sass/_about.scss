@@ -1,0 +1,25 @@
+.about {
+  padding: 9rem 2rem;
+  height: 90vh;
+  color: #fff;
+  background-color: var(--primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__heading {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+  }
+
+  &__text {
+    word-break: break;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    width: 50vw;
+  }
+}

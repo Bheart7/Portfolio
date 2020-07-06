@@ -1,0 +1,64 @@
+.skills {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  margin-bottom: 7rem;
+
+  &__wrapper {
+    background-color: #fff;
+    z-index: 1;
+    padding: 5rem 2rem 2rem;
+    border-radius: 30px;
+    position: absolute;
+    top: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  &__heading {
+    color: var(--primary);
+    font-size: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  &__collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+  }
+
+  &__card {
+    padding: 3rem 0;
+    border-radius: 30px;
+    width: 20rem;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-bottom: 3rem;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+  }
+
+  &__htmlIcon {
+    fill: orangered;
+  }
+
+  &__cssIcon {
+    fill: dodgerblue;
+  }
+
+  &__gitIcon {
+    fill: orangered;
+  }
+}

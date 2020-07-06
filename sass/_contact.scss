@@ -1,0 +1,47 @@
+.contact {
+  height: 60vh;
+  background-color: var(--primary);
+  text-align: center;
+
+  &__logo {
+    font-size: 2.5rem;
+    padding: 3rem 0 2rem;
+    color: #fff;
+  }
+
+  &__text {
+    font-size: 2.5rem;
+    padding: 3rem 0 4rem;
+    color: #fff;
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 7rem);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__link {
+    display: block;
+    border: 1.5px solid #eee;
+    padding: 0.7rem 0.8rem;
+    border-radius: 50px;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #fff;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+  }
+
+  &__link:hover &__icon {
+    fill: var(--primary);
+  }
+}
