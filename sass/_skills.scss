@@ -1,7 +1,7 @@
 .skills {
   position: relative;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 7rem;
 
   &__wrapper {
@@ -9,12 +9,20 @@
     z-index: 1;
     padding: 5rem 2rem 2rem;
     border-radius: 30px;
-    position: absolute;
-    top: -7rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    margin-top: -7rem;
     width: 70vw;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+    @include respond(tab-port) {
+      width: 80vw;
+      padding: 5rem 5rem 3rem;
+    }
+
+    @include respond(phone) {
+      width: 90vw;
+      padding: 5rem 4rem;
+    }
   }
 
   &__heading {
@@ -38,6 +46,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(phone) {
+      width: auto;
+      padding: 5rem 0;
+    }
   }
 
   &__icon {

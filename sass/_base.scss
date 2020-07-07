@@ -1,5 +1,9 @@
 :root {
   --primary: #7510f7;
+  --font-primary: 'lato', sans-serif;
+  --font-display: 'montserrat', sans-serif;
+  --font-logo: 'Georgia', 'lato';
+  --font-text: 'Comic Neue', cursive;
 }
 
 *,
@@ -14,9 +18,17 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 80%;
+  }
+
+  @include respond(phone) {
+    font-size: 60%;
+  }
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-primary);
   font-weight: normal;
 }

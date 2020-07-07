@@ -4,12 +4,14 @@
   text-align: center;
 
   &__logo {
+    font-family: var(--font-logo);
     font-size: 2.5rem;
     padding: 3rem 0 2rem;
     color: #fff;
   }
 
   &__text {
+    font-family: var(--font-display);
     font-size: 2.5rem;
     padding: 3rem 0 4rem;
     color: #fff;
@@ -22,6 +24,7 @@
     justify-content: center;
     align-items: center;
     justify-items: center;
+    row-gap: 1rem;
   }
 
   &__link {

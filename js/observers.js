@@ -18,3 +18,8 @@ const headerObserver = new IntersectionObserver(function (
 headerOptions);
 
 headerObserver.observe(header);
+
+const checkbox = document.getElementById('navi-toggle');
+checkbox.addEventListener('click', e => {
+  navbar.classList.toggle('nav');
+});

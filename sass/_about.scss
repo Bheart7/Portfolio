@@ -9,8 +9,12 @@
   align-items: center;
   justify-content: flex-start;
 
+  @include respond(phone) {
+    height: 60vh;
+  }
+
   &__heading {
-    font-family: 'Comic Neue', cursive;
+    font-family: var(--font-text);
     font-size: 2.5rem;
     font-weight: bold;
     padding-bottom: 2rem;
@@ -18,8 +22,11 @@
 
   &__text {
     word-break: break;
-    font-family: 'Nunito', sans-serif;
     font-size: 1.5rem;
     width: 50vw;
+
+    @include respond(phone) {
+      width: 90vw;
+    }
   }
 }

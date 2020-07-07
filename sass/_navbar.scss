@@ -10,9 +10,31 @@
   font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
+
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+
+  @include respond(phone) {
+    display: none;
+    font-size: 2.5rem;
+    background-color: var(--primary);
+    min-height: 100vh;
+    width: 100%;
+    grid-template-columns: none;
+    justify-items: center;
+  }
+
   &__logo {
+    font-family: var(--font-logo);
+    font-size: 2.6rem;
     display: flex;
     justify-content: center;
+
+    @include respond(phone) {
+      margin-top: 10rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__list {
@@ -20,10 +42,26 @@
 
     display: flex;
     align-items: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__resume {
+    display: flex;
+    @include respond(phone) {
+      margin-left: 3rem;
+    }
   }
 
   &__item {
     padding: 1.5rem;
+
+    @include respond(phone) {
+      padding: 3rem 1rem;
+    }
   }
 
   &__link:link,
@@ -43,19 +81,103 @@
     outline: none;
   }
 
-  &__resume {
-    display: flex;
-  }
-
   &__downloadIcon {
     cursor: pointer;
     margin-left: 0.2em;
     width: 2rem;
     height: 2rem;
     fill: #fff;
+
+    @include respond(phone) {
+      margin-top: 0.5rem;
+    }
   }
 }
 
 .scrolled {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.navigation {
+  display: none;
+
+  @include respond(phone) {
+    display: block;
+  }
+  position: relative;
+  &__checkbox {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 6.5rem;
+    height: 6.5rem;
+    left: 0;
+  }
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  cursor: pointer;
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #222;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+.nav {
+  display: block;
 }

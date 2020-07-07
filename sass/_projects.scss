@@ -1,6 +1,6 @@
 .projects {
-  padding: 5rem;
-  height: 100vh;
+  padding: 5rem 0;
+  min-height: 100vh;
   text-align: center;
 
   &__heading {
@@ -12,7 +12,6 @@
   &__text {
     padding-bottom: 3rem;
     font-size: 1.3rem;
-    font-family: 'Nunito', sans-serif;
   }
 
   &__email {
@@ -21,23 +20,38 @@
   }
 
   &__collection {
+    padding: 0 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-content: space-evenly;
+    gap: 2rem;
+
+    @include respond(ipad) {
+      padding: 0 2rem;
+    }
   }
 
   &__sentence {
-    font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 2rem;
     color: white;
     display: none;
     padding-bottom: 2rem;
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 
   &__btn {
     display: none;
     font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
+
+    @include respond(phone) {
+      display: block;
+    }
+
     &:link,
     &:visited {
       text-decoration: none;
@@ -65,6 +79,7 @@
     width: 25rem;
     height: 20rem;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    justify-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,13 +94,40 @@
 
     &--1 {
       background-image: url('../images/typesongs.png');
+
+      @include respond(phone) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(117, 16, 247, 0.8),
+            rgba(117, 16, 247, 0.8)
+          ),
+          url('../images/typesongs.png');
+      }
     }
     &--2 {
       background-image: url('../images/empire.png');
+
+      @include respond(phone) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(117, 16, 247, 0.8),
+            rgba(117, 16, 247, 0.8)
+          ),
+          url('../images/empire.png');
+      }
     }
     &--3 {
       background-image: url('../images/imart.png');
       background-position: top;
+
+      @include respond(phone) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(117, 16, 247, 0.8),
+            rgba(117, 16, 247, 0.8)
+          ),
+          url('../images/imart.png');
+      }
     }
 
     &--1:hover {
