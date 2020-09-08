@@ -34,18 +34,20 @@
   &__collection {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 2rem;
+    gap: 3rem;
   }
 
   &__card {
     padding: 3rem 0;
     border-radius: 30px;
-    width: 20rem;
+    max-width: 20rem;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 18rem;
+    margin: 0 auto;
 
     @include respond(phone) {
       width: auto;
